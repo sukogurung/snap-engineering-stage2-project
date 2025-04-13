@@ -35,6 +35,7 @@ pets = [{
   adopted: false,
   image: "images/luna.jpg"
 },...]
+```
 - 🧠 **Vanilla JavaScript** — Handles data logic, interactivity, and DOM manipulation.
 - 🎨 **HTML & CSS** — Structure and styling for a clean, polished design.
 - 🔧 **Google Developer Tools** & **Visual Studio Code** — For debugging, testing, and development.
