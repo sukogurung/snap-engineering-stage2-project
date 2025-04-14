@@ -8,9 +8,31 @@
   </head>
 
   <body>
-    <header class="main-header">
+    <header>
       <h1 class="title">SnapVerse Pet Center</h1>
     </header>
+    <section id="filters">
+      <div>
+          <label for="pet-type">Pet Type:</label>
+          <select id="pet-type">
+              <option value="all">All</option>
+              <option value="dog">Dogs</option>
+              <option value="cat">Cats</option>
+              <option value="other">Other</option>
+          </select>
+      </div>
+      <div>
+          <label for="search">Search by Name or Breed:</label>
+          <input type="text" id="search" placeholder="Enter pet name or breed">
+      </div>
+      <div>
+          <label for="sort">Sort by Age:</label>
+          <select id="sort">
+              <option value="youngest">Youngest to Oldest</option>
+              <option value="oldest">Oldest to Youngest</option>
+          </select>
+      </div>
+  </section>
     <div id="card-container"></div>
       <div class="card" style="display: none">
         <div class="card-content">
@@ -19,6 +41,8 @@
           <p>Age: </p>
           <p>Type: </p>
           <p>Breed: </p>
+          <button>Adopt</button>
+          <button>Remove</button>
         </div>
       </div>
     </div>
