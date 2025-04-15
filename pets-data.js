@@ -1,6 +1,15 @@
 // Pet data
 export const pets = [
   {
+    id: 11,
+    name: "AvaTar",
+    age: 1,
+    type: "dog",
+    breed: "Beagle",
+    description: "Curious and playful, has a great sense of smell.",
+    image: "./images/avatar.jpg",
+  },
+  {
     id: 1,
     name: "Buddy",
     age: 3,
@@ -34,7 +43,7 @@ export const pets = [
     type: "cat",
     breed: "Maine Coon",
     description: "Playful and affectionate, loves to be groomed.",
-    image: "./images/pet4.png",
+    image: "./images/mittens.png",
   },
   {
     id: 5,
@@ -56,8 +65,8 @@ export const pets = [
   },
   {
     id: 7,
-    name: "Hammy",
-    age: 1,
+    name: "Tammy",
+    age: 3,
     type: "other",
     breed: "Syrian Hamster",
     description: "Active at night, loves running on his wheel.",
@@ -75,8 +84,8 @@ export const pets = [
   {
     id: 9,
     name: "Luna",
-    age: 2,
-    type: "dog",
+    age: 1,
+    type: "cat",
     breed: "Husky",
     description: "Energetic and friendly, loves cold weather.",
     image: "./images/luna.jpg",
@@ -89,15 +98,6 @@ export const pets = [
     breed: "British Shorthair",
     description: "Calm and easygoing, enjoys lounging around.",
     image: "./images/No Image Available.png",
-  },
-  {
-    id: 11,
-    name: "AvaTar",
-    age: 4,
-    type: "dog",
-    breed: "Beagle",
-    description: "Curious and playful, has a great sense of smell.",
-    image: "./images/avatar.jpg",
   },
   {
     id: 12,
@@ -151,7 +151,7 @@ export const pets = [
     type: "cat",
     breed: "Scottish Fold",
     description: "Sweet-tempered and quiet, loves to cuddle.",
-    image: "./images/No Image Available.png",
+    image: "./images/pet4.png",
   },
   {
     id: 18,
@@ -175,7 +175,7 @@ export const pets = [
     id: 20,
     name: "Oreo",
     age: 1,
-    type: "cat",
+    type: "dog",
     breed: "Tuxedo",
     description: "Energetic and mischievous, loves to play.",
     image: "./images/oreo.jpg",
