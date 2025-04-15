@@ -26,11 +26,18 @@ function showCards(petsToShow) {
     cardBreed.textContent = `Breed: ${pet.breed}`;
 
     const adoptButton = nextCard.querySelector("button:nth-of-type(1)");
-    adoptButton.addEventListener("click", AdoptAlert);
+    adoptButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      AdoptAlert();
+    });
 
     const removeButton = nextCard.querySelector("button:nth-of-type(2)");
-    removeButton.addEventListener("click", () => removeThisCard(nextCard));
+    removeButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      removeThisCard(nextCard);
+    });
 
+    nextCard.addEventListener("click", () => showPetDetails(pet))
     cardContainer.appendChild(nextCard);
   });
 }
@@ -79,14 +86,55 @@ function removeThisCard(cardElement) {
   cardContainer.removeChild(cardElement);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    showCards(pets);
-});
-
+const modal = document.getElementById("pet-modal")
+const modalContent = document.getElementById("modal-content")
+const closeModal = document.getElementById("close-modal")
 const petTypeFilter = document.getElementById("pet-type");
 const searchInput = document.getElementById("search");
 const sortSelect = document.getElementById("sort");
 
+// Function to show pet details in modal
+function showPetDetails(pet) {
+  modalContent.innerHTML = `
+    <h2>${pet.name}</h2>
+    <img src="${pet.image}" alt="${pet.name}">
+    <p><strong>Age:</strong> ${pet.age} ${pet.age === 1 ? "year" : "years"}</p>
+    <p><strong>Type:</strong> ${pet.type}</p>
+    <p><strong>Breed:</strong> ${pet.breed}</p>
+    <p><strong>Description:</strong> ${pet.description}</p>
+    <button id="modal-adopt-btn">Adopt</button>
+    <button id="modal-remove-btn">Remove</button>
+  `;
+  modal.style.display = "block";
+  document.getElementById("modal-adopt-btn").addEventListener("click", () => {
+    AdoptAlert();
+  });
+
+  document.getElementById("modal-remove-btn").addEventListener("click", () => {
+    const allCards = document.querySelectorAll(".card");
+    for (const card of allCards) {
+      const title = card.querySelector("h3");
+      if (title && title.textContent === pet.name) {
+        removeThisCard(card);
+        break;
+      }
+    }
+    modal.style.display = "none";
+  });
+}
+
 petTypeFilter.addEventListener("change", filterAndSortPets);
 searchInput.addEventListener("input", filterAndSortPets);
 sortSelect.addEventListener("change", filterAndSortPets);
+closeModal.addEventListener("click", () => (modal.style.display = "none"))
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none"
+  }
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  showCards(pets);
+});
+
+
