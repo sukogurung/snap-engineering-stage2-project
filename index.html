@@ -11,28 +11,34 @@
     <header>
       <h1 class="title">SnapVerse Pet Center</h1>
     </header>
-    <section id="filters">
-      <div>
+    <main>
+      <section id="filters">
+        <div>
           <label for="pet-type">Pet Type:</label>
           <select id="pet-type">
-              <option value="all">All</option>
-              <option value="dog">Dogs</option>
-              <option value="cat">Cats</option>
-              <option value="other">Other</option>
+            <option value="all">All</option>
+            <option value="dog">Dogs</option>
+            <option value="cat">Cats</option>
+            <option value="other">Other</option>
           </select>
-      </div>
-      <div>
+        </div>
+
+        <div>
           <label for="search">Search by Name or Breed:</label>
-          <input type="text" id="search" placeholder="Enter pet name or breed">
-      </div>
-      <div>
+          <input type="text" id="search" placeholder="Enter pet name (eg. Snappie,..) or breed">
+        </div>
+        
+        <div>
           <label for="sort">Sort by Age:</label>
           <select id="sort">
-              <option value="youngest">Youngest to Oldest</option>
-              <option value="oldest">Oldest to Youngest</option>
+            <option value="youngest">Youngest to Oldest</option>
+            <option value="oldest">Oldest to Youngest</option>
           </select>
-      </div>
-  </section>
+        </div>
+
+        
+      </section>
+</main>
     <div id="card-container"></div>
       <div class="card" style="display: none">
         <div class="card-content">
@@ -41,13 +47,23 @@
           <p>Age: </p>
           <p>Type: </p>
           <p>Breed: </p>
+          <div class="button-container">
           <button>Adopt</button>
           <button>Remove</button>
         </div>
+        </div>
       </div>
     </div>
+
+    <div id="pet-modal" class="modal">
+      <div class="modal-content">
+          <span id="close-modal" class="close">&times;</span>
+          <div id="modal-content"></div>
+      </div>
+  </div>
+
     <div class="footer">
-      <p>Created with love by Suko for Snapchat Academy ❤️</p>
+      <p>made with love & creativity by Suko for Snapchat Academy ❤️</p>
     </div>
   </body>
 </html>
