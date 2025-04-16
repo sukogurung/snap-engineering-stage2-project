@@ -71,7 +71,7 @@ export const pets = [
     type: "other",
     breed: "Labrador Retriever",
     description: "Outgoing and friendly, great with children.",
-    image: "/images/max.jpg",
+    image: "./images/max.jpg",
   },
   {
     id: 8,
