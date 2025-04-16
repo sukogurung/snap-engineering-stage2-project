@@ -1,6 +1,7 @@
 # 🐾 SnapVerse Pet Center
 
 Welcome to **SnapVerse Pet Center**, a catalog website dedicated to helping users explore and adopt adorable pets from the SnapVerse! This project was created as part of the **Snapchat Academy** submission and showcases a fully interactive and visually engaging catalog of pets available for adoption.
+[Deployed site](https://sukogurung.github.io/snap-engineering-stage2-project/)
 
 ## 📌 Project Description
 
